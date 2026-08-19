@@ -1,0 +1,11 @@
+const router = require('express').Router();
+const { create, list, details } = require('../controllers/complaint.controller');
+const { updateComplaintStatus } = require('../controllers/status.controller');
+const { protect } = require('../middleware/auth.middleware');
+const { validateComplaint, validateStatus, validateFilters } = require('../validators/complaint.validator');
+router.use(protect);
+router.post('/', validateComplaint, create);
+router.get('/', validateFilters, list);
+router.patch('/:id/status', validateStatus, updateComplaintStatus);
+router.get('/:id', details);
+module.exports = router;

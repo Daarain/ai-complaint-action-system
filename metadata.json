@@ -1,0 +1,6 @@
+{
+  "name": "AI Complaint-Action System",
+  "description": "Civic issue reporting, AI-powered routing, and real-time tracking platform for citizens, officers, and municipal admins.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
