@@ -66,3 +66,20 @@
 .ai-tag { display: inline-flex; align-items: center; gap: 4px; background-color: #cce5ff; color: #004b73; border: 1px solid #92ccff; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
 .role-badge { background-color: #bbeed5; color: #1f4f3d; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 
+/* Legacy utility normalization: keeps every role/page on the same Civic Flow system. */
+[class~="bg-white"] { background-color: var(--color-card) !important; }
+[class~="bg-slate-50"], [class~="bg-slate-100"], [class~="bg-stone-50"], [class~="bg-stone-100"] { background-color: var(--color-secondary) !important; }
+[class~="text-slate-900"], [class~="text-slate-800"], [class~="text-slate-700"], [class~="text-slate-600"], [class~="text-stone-900"], [class~="text-stone-800"], [class~="text-stone-700"], [class~="text-stone-600"] { color: var(--color-foreground) !important; }
+[class~="text-slate-500"], [class~="text-slate-400"], [class~="text-stone-500"], [class~="text-stone-400"] { color: var(--color-muted-foreground) !important; }
+[class~="border-slate-200"], [class~="border-slate-100"], [class~="border-stone-200"], [class~="border-stone-100"] { border-color: var(--color-border) !important; }
+[class~="text-blue-600"], [class~="text-blue-700"], [class~="text-indigo-600"], [class~="text-indigo-700"], [class~="text-[#2563EB]"] { color: var(--color-primary) !important; }
+[class~="bg-blue-50"], [class~="bg-[#EFF6FF]"], [class~="bg-indigo-50"] { background-color: var(--color-accent) !important; }
+[class~="border-blue-200"], [class~="border-indigo-200"], [class~="border-[#2563EB]"] { border-color: var(--color-input) !important; }
+[class~="bg-[#2563EB]"], [class~="bg-indigo-600"], [class~="bg-blue-600"] { background-color: var(--color-primary) !important; }
+[class~="hover:bg-[#1D4ED8]"]:hover, [class~="hover:bg-blue-700"]:hover { background-color: var(--color-primary-hover) !important; }
+[class~="text-emerald-600"], [class~="text-emerald-700"], [class~="text-emerald-800"] { color: var(--color-primary) !important; }
+[class~="bg-emerald-50"] { background-color: var(--color-secondary) !important; }
+[class~="border-emerald-200"] { border-color: var(--color-input) !important; }
+[class~="focus:border-[#2563EB]"]:focus, [class~="focus:border-blue-500"]:focus { border-color: var(--color-primary) !important; }
+[class~="focus:ring-blue-500\/20"]:focus { --tw-ring-color: color-mix(in srgb, var(--color-primary) 20%, transparent) !important; }
+
