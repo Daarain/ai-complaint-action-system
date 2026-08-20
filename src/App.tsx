@@ -77,7 +77,7 @@ const AppContent: React.FC = () => {
       />
 
       {/* 3. Main Workspace Area */}
-      <div className="flex-1 flex w-full max-w-7xl mx-auto">
+      <div className="flex-1 flex w-full min-w-0">
         {/* Sidebar for Desktop Officer / Admin */}
         {role !== 'citizen' && (
           <Sidebar

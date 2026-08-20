@@ -13,8 +13,8 @@ export const Header: React.FC<HeaderProps> = ({ title, subtitle, onOpenNewCompla
   const { user, role, logout } = useAuth();
 
   return (
-    <header id="main-header" className="bg-white border-b border-[#E2E8F0] sticky top-0 z-30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <header id="main-header" className="bg-card border-b border-border sticky top-0 z-30">
+      <div className="w-full px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* Brand / Logo */}
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-lg bg-[#2563EB] flex items-center justify-center text-white shadow-sm shadow-blue-500/20">
