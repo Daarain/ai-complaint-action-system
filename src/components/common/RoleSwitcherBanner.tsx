@@ -17,8 +17,8 @@ export const RoleSwitcherBanner: React.FC<RoleSwitcherBannerProps> = ({ onOpenAu
   ];
 
   return (
-    <div id="role-switcher-banner" className="bg-[#0F172A] text-white border-b border-[#1E293B] px-4 py-2 text-xs">
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+    <div id="role-switcher-banner" className="bg-primary text-primary-foreground border-b border-primary px-4 py-2 text-xs">
+      <div className="w-full flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-[#38BDF8] animate-ping" />
           <span className="font-semibold tracking-wide flex items-center gap-1.5 text-slate-200">

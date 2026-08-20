@@ -71,10 +71,10 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
   return (
     <div id="citizen-home-view" className="space-y-6 max-w-4xl mx-auto pb-12">
       {/* Welcome & Prompt Hero Banner */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#1E3A8A] text-white p-6 sm:p-8 shadow-xl shadow-blue-900/10">
+      <div className="relative overflow-hidden rounded-2xl bg-primary text-primary-foreground p-6 sm:p-8 ambient-shadow-lg">
         <div className="relative z-10 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-blue-200 text-xs font-semibold border border-white/15">
-            <Sparkles size={14} className="text-[#60A5FA]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-primary-fixed text-xs font-semibold border border-white/15">
+            <Sparkles size={14} className="text-primary-fixed" />
             <span>AI Automated Issue Routing</span>
           </div>
 
@@ -82,7 +82,7 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
             <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-white tracking-tight">
               Hello, {user?.name?.split(' ')[0] || 'Resident'}
             </h2>
-            <p className="text-slate-300 text-sm mt-1 max-w-xl">
+            <p className="text-primary-fixed text-sm mt-1 max-w-xl">
               See a broken streetlight, pothole, or water leak? Snap a photo or speak your complaint. CivicAI classifies and dispatches field teams automatically.
             </p>
           </div>
@@ -95,15 +95,15 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
               className="flex items-center justify-between p-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 transition backdrop-blur-md group text-left"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-blue-500/20 text-[#60A5FA] group-hover:scale-105 transition">
+                <div className="p-2 rounded-lg bg-blue-500/20 text-primary-fixed group-hover:scale-105 transition">
                   <Camera size={20} />
                 </div>
                 <div>
                   <div className="font-bold text-xs text-white">Snap Photo</div>
-                  <div className="text-[11px] text-slate-300">AI image analysis</div>
+                  <div className="text-[11px] text-primary-fixed">AI image analysis</div>
                 </div>
               </div>
-              <ArrowRight size={14} className="text-[#60A5FA] group-hover:translate-x-1 transition" />
+              <ArrowRight size={14} className="text-primary-fixed group-hover:translate-x-1 transition" />
             </button>
 
             <button
@@ -112,15 +112,15 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
               className="flex items-center justify-between p-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 transition backdrop-blur-md group text-left"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-blue-500/20 text-[#60A5FA] group-hover:scale-105 transition">
+                <div className="p-2 rounded-lg bg-blue-500/20 text-primary-fixed group-hover:scale-105 transition">
                   <Mic size={20} />
                 </div>
                 <div>
                   <div className="font-bold text-xs text-white">Voice Note</div>
-                  <div className="text-[11px] text-slate-300">Speak in your language</div>
+                  <div className="text-[11px] text-primary-fixed">Speak in your language</div>
                 </div>
               </div>
-              <ArrowRight size={14} className="text-[#60A5FA] group-hover:translate-x-1 transition" />
+              <ArrowRight size={14} className="text-primary-fixed group-hover:translate-x-1 transition" />
             </button>
 
             <button
@@ -129,15 +129,15 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
               className="flex items-center justify-between p-3.5 rounded-xl bg-white text-[#1E293B] hover:bg-blue-50 transition shadow-lg group text-left"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-blue-100 text-[#2563EB] group-hover:scale-105 transition">
+                <div className="p-2 rounded-lg bg-blue-100 text-primary group-hover:scale-105 transition">
                   <FileText size={20} />
                 </div>
                 <div>
-                  <div className="font-extrabold text-xs text-slate-900">File Report</div>
+                  <div className="font-extrabold text-xs text-foreground">File Report</div>
                   <div className="text-[11px] text-slate-500">Quick form entry</div>
                 </div>
               </div>
-              <ArrowRight size={14} className="text-[#2563EB] group-hover:translate-x-1 transition" />
+              <ArrowRight size={14} className="text-primary group-hover:translate-x-1 transition" />
             </button>
           </div>
         </div>
@@ -149,7 +149,7 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
       {/* Category Quick Selector */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-bold font-heading text-slate-900">Common Issue Categories</h3>
+          <h3 className="text-sm font-bold font-heading text-foreground">Common Issue Categories</h3>
           <span className="text-xs text-slate-500">Select to file directly</span>
         </div>
 
@@ -163,7 +163,7 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
                 onClick={() => onOpenReport(type.name)}
                 className="flex flex-col items-center justify-center p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:bg-blue-50/50 transition group shadow-sm text-center"
               >
-                <div className="w-10 h-10 rounded-xl bg-slate-50 group-hover:bg-blue-50 text-[#2563EB] flex items-center justify-center mb-2 transition">
+                <div className="w-10 h-10 rounded-xl bg-slate-50 group-hover:bg-blue-50 text-primary flex items-center justify-center mb-2 transition">
                   <Icon size={20} />
                 </div>
                 <span className="text-xs font-semibold text-slate-800 line-clamp-1">{type.name}</span>
@@ -178,9 +178,9 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <h3 className="text-sm font-bold font-heading text-slate-900">Your Active Reports</h3>
+            <h3 className="text-sm font-bold font-heading text-foreground">Your Active Reports</h3>
             {activeComplaints.length > 0 && (
-              <span className="bg-[#EFF6FF] text-[#2563EB] text-[11px] font-bold px-2 py-0.5 rounded-full border border-blue-200">
+              <span className="bg-[#EFF6FF] text-primary text-[11px] font-bold px-2 py-0.5 rounded-full border border-blue-200">
                 {activeComplaints.length} in progress
               </span>
             )}
@@ -188,7 +188,7 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
           <button
             id="view-all-complaints-btn"
             onClick={onViewAllComplaints}
-            className="text-xs font-semibold text-[#2563EB] hover:underline flex items-center gap-1"
+            className="text-xs font-semibold text-primary hover:underline flex items-center gap-1"
           >
             <span>View All</span>
             <ChevronRight size={14} />
@@ -202,10 +202,10 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
           </div>
         ) : activeComplaints.length === 0 ? (
           <div className="p-8 text-center bg-white rounded-2xl border border-slate-200 shadow-sm">
-            <div className="w-12 h-12 rounded-full bg-blue-50 text-[#2563EB] flex items-center justify-center mx-auto mb-3">
+            <div className="w-12 h-12 rounded-full bg-blue-50 text-primary flex items-center justify-center mx-auto mb-3">
               <ShieldCheck size={24} />
             </div>
-            <h4 className="text-sm font-bold text-slate-900">No active complaints</h4>
+            <h4 className="text-sm font-bold text-foreground">No active complaints</h4>
             <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
               All reported civic issues in your district are currently resolved or you haven't filed any yet.
             </p>
@@ -233,7 +233,7 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
                       className="w-16 h-16 rounded-lg object-cover flex-shrink-0 ring-1 ring-slate-200"
                     />
                   ) : (
-                    <div className="w-16 h-16 rounded-lg bg-blue-50 text-[#2563EB] flex items-center justify-center flex-shrink-0">
+                    <div className="w-16 h-16 rounded-lg bg-blue-50 text-primary flex items-center justify-center flex-shrink-0">
                       <Droplets size={24} />
                     </div>
                   )}
@@ -248,7 +248,7 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
                         </span>
                       )}
                     </div>
-                    <h4 className="text-sm font-bold text-slate-900 line-clamp-1">{c.title}</h4>
+                    <h4 className="text-sm font-bold text-foreground line-clamp-1">{c.title}</h4>
                     <p className="text-xs text-slate-500 flex items-center gap-1">
                       <MapPin size={12} className="text-slate-400" />
                       <span>{c.location?.address || 'Main St, Ward 14'}</span>
@@ -261,7 +261,7 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
                     <Clock size={12} />
                     <span>{new Date(c.created_at).toLocaleDateString()}</span>
                   </div>
-                  <div className="text-xs font-semibold text-[#2563EB] flex items-center gap-1 mt-1">
+                  <div className="text-xs font-semibold text-primary flex items-center gap-1 mt-1">
                     <span>Live Tracking</span>
                     <ChevronRight size={14} />
                   </div>
@@ -279,7 +279,7 @@ export const CitizenHome: React.FC<CitizenHomeProps> = ({
             <AlertCircle size={18} />
           </div>
           <div>
-            <div className="text-xs font-bold text-slate-900">Life-Threatening Civic Emergencies</div>
+            <div className="text-xs font-bold text-foreground">Life-Threatening Civic Emergencies</div>
             <div className="text-[11px] text-slate-500">For live gas leaks or active electrical wires, call 911 or (555) 019-9999 directly.</div>
           </div>
         </div>
