@@ -59,7 +59,7 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div id="civic-app-container" className="min-h-screen bg-[#F7F9F8] flex flex-col font-sans">
+    <div id="civic-app-container" className="min-h-screen bg-background flex flex-col font-sans">
       {/* 1. Global Role Switcher Simulation Ribbon */}
       <RoleSwitcherBanner onOpenAuthModal={() => setIsAuthModalOpen(true)} />
 
@@ -165,7 +165,7 @@ const AppContent: React.FC = () => {
       {role === 'citizen' && (
         <nav
           id="mobile-bottom-nav"
-          className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-stone-200 py-2 px-6 flex items-center justify-around z-40 shadow-lg"
+          className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border py-2 px-6 flex items-center justify-around z-40 ambient-shadow-lg"
         >
           <button
             onClick={() => {
@@ -173,7 +173,7 @@ const AppContent: React.FC = () => {
               setCitizenTab('home');
             }}
             className={`flex flex-col items-center gap-1 transition ${
-              citizenTab === 'home' && !selectedComplaintId ? 'text-[#12533e] font-bold' : 'text-stone-400'
+              citizenTab === 'home' && !selectedComplaintId ? 'text-primary font-bold' : 'text-muted-foreground'
             }`}
           >
             <Home size={20} />
@@ -185,7 +185,7 @@ const AppContent: React.FC = () => {
             onClick={() => handleOpenReport()}
             className="flex flex-col items-center -mt-5"
           >
-            <div className="w-12 h-12 rounded-full bg-[#12533e] text-white flex items-center justify-center shadow-lg shadow-[#12533e]/30 hover:scale-105 transition">
+            <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center ambient-shadow-lg hover:scale-105 transition">
               <PlusCircle size={24} />
             </div>
             <span className="text-[10px] font-bold text-[#12533e] mt-0.5">Report</span>
@@ -197,7 +197,7 @@ const AppContent: React.FC = () => {
               setCitizenTab('complaints');
             }}
             className={`flex flex-col items-center gap-1 transition ${
-              citizenTab === 'complaints' ? 'text-[#12533e] font-bold' : 'text-stone-400'
+              citizenTab === 'complaints' ? 'text-primary font-bold' : 'text-muted-foreground'
             }`}
           >
             <ClipboardList size={20} />
