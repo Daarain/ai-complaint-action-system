@@ -3,37 +3,84 @@
 @theme inline {
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Manrope', sans-serif;
-  --color-background: #f7f9f8;
-  --color-foreground: #0f1f19;
-  --color-card: #ffffff;
-  --color-primary: #2f6b55;
-  --color-primary-foreground: #ffffff;
-  --color-secondary: #e5f8ee;
-  --color-secondary-foreground: #1f4f3d;
-  --color-muted: #e5f8ee;
-  --color-muted-foreground: #404944;
-  --color-accent: #cce5ff;
-  --color-accent-foreground: #004b73;
-  --color-border: #e0e5e3;
-  --color-input: #a7beb5;
-  --color-ring: #2f6b55;
-  --color-destructive: #ba1a1a;
+  --color-background: var(--md-sys-color-surface);
+  --color-foreground: var(--md-sys-color-on-surface);
+  --color-card: var(--md-sys-color-surface-container-lowest);
+  --color-primary: var(--md-sys-color-primary-container);
+  --color-primary-foreground: var(--md-sys-color-on-primary);
+  --color-secondary: var(--md-sys-color-surface-container-low);
+  --color-secondary-foreground: var(--md-sys-color-on-secondary-container);
+  --color-muted: var(--md-sys-color-surface-container-low);
+  --color-muted-foreground: var(--md-sys-color-on-surface-variant);
+  --color-accent: var(--md-sys-color-tertiary-fixed);
+  --color-accent-foreground: var(--md-sys-color-on-tertiary-fixed-variant);
+  --color-border: var(--md-sys-color-outline-variant);
+  --color-input: var(--md-sys-color-outline);
+  --color-ring: var(--md-sys-color-primary);
+  --color-destructive: var(--md-sys-color-error);
+  --color-tertiary: var(--md-sys-color-tertiary);
 }
 
 @layer base {
   :root {
-    --bg: #f7f9f8;
-    --sidebar: #12533e;
-    --card: #ffffff;
-    --primary: #2f6b55;
-    --primary-hover: #12533e;
-    --text-main: #0f1f19;
-    --text-muted: #404944;
-    --border: #e0e5e3;
-    --danger: #ba1a1a;
-    --success: #2f6b55;
-    --warning: #8a6245;
-    --info: #3678a8;
+    /* Material Design 3 system color roles — the single source for UI color. */
+    --md-sys-color-primary: #12533E;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #2F6B55;
+    --md-sys-color-on-primary-container: #ABE9CD;
+    --md-sys-color-primary-fixed: #B1F0D4;
+    --md-sys-color-primary-fixed-dim: #96D3B8;
+    --md-sys-color-on-primary-fixed: #002116;
+    --md-sys-color-on-primary-fixed-variant: #0F513C;
+    --md-sys-color-inverse-primary: #96D3B8;
+    --md-sys-color-secondary: #386754;
+    --md-sys-color-on-secondary: #FFFFFF;
+    --md-sys-color-secondary-container: #BBEED5;
+    --md-sys-color-on-secondary-container: #3E6D5A;
+    --md-sys-color-secondary-fixed: #BBEED5;
+    --md-sys-color-secondary-fixed-dim: #9FD1BA;
+    --md-sys-color-on-secondary-fixed: #002116;
+    --md-sys-color-on-secondary-fixed-variant: #1F4F3D;
+    --md-sys-color-tertiary: #004D76;
+    --md-sys-color-on-tertiary: #FFFFFF;
+    --md-sys-color-tertiary-container: #1C6594;
+    --md-sys-color-on-tertiary-container: #BEDFFF;
+    --md-sys-color-tertiary-fixed: #CCE5FF;
+    --md-sys-color-tertiary-fixed-dim: #92CCFF;
+    --md-sys-color-on-tertiary-fixed: #001D31;
+    --md-sys-color-on-tertiary-fixed-variant: #004B73;
+    --md-sys-color-surface: #EBFEF4;
+    --md-sys-color-surface-dim: #CCDED5;
+    --md-sys-color-surface-bright: #EBFEF4;
+    --md-sys-color-surface-container-lowest: #FFFFFF;
+    --md-sys-color-surface-container-low: #E5F8EE;
+    --md-sys-color-surface-container: #DFF2E9;
+    --md-sys-color-surface-container-high: #DAEDE3;
+    --md-sys-color-surface-container-highest: #D4E7DE;
+    --md-sys-color-surface-variant: #D4E7DE;
+    --md-sys-color-on-surface: #0F1F19;
+    --md-sys-color-on-surface-variant: #404944;
+    --md-sys-color-inverse-surface: #24342E;
+    --md-sys-color-inverse-on-surface: #E2F5EC;
+    --md-sys-color-outline: #707974;
+    --md-sys-color-outline-variant: #BFC9C2;
+    --md-sys-color-surface-tint: #2D6953;
+    --md-sys-color-error: #BA1A1A;
+    --md-sys-color-on-error: #FFFFFF;
+    --md-sys-color-error-container: #FFDAD6;
+    --md-sys-color-on-error-container: #93000A;
+    --bg: var(--md-sys-color-surface);
+    --sidebar: var(--md-sys-color-inverse-surface);
+    --card: var(--md-sys-color-surface-container-lowest);
+    --primary: var(--md-sys-color-primary-container);
+    --primary-hover: var(--md-sys-color-primary);
+    --text-main: var(--md-sys-color-on-surface);
+    --text-muted: var(--md-sys-color-on-surface-variant);
+    --border: var(--md-sys-color-outline-variant);
+    --danger: var(--md-sys-color-error);
+    --success: var(--md-sys-color-primary-container);
+    --warning: #8A6245;
+    --info: var(--md-sys-color-tertiary);
     --font-heading: 'Manrope', sans-serif;
     --font-body: 'Inter', sans-serif;
   }
@@ -53,8 +100,8 @@
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #a7beb5; border-radius: 9999px; }
-::-webkit-scrollbar-thumb:hover { background: #5f8f7a; }
+::-webkit-scrollbar-thumb { background: var(--md-sys-color-outline-variant); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--md-sys-color-outline); }
 
 @keyframes softPulse {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -63,18 +110,18 @@
 .animate-soft-pulse { animation: softPulse 2.5s ease-in-out infinite; }
 .ambient-shadow { box-shadow: 0 1px 3px rgba(32, 48, 42, 0.05); }
 .ambient-shadow-lg { box-shadow: 0 10px 30px rgba(32, 48, 42, 0.08); }
-.ai-tag { display: inline-flex; align-items: center; gap: 4px; background-color: #cce5ff; color: #004b73; border: 1px solid #92ccff; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
-.role-badge { background-color: #bbeed5; color: #1f4f3d; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.ai-tag { display: inline-flex; align-items: center; gap: 4px; background-color: var(--md-sys-color-tertiary-fixed); color: var(--md-sys-color-on-tertiary-fixed-variant); border: 1px solid var(--md-sys-color-tertiary-fixed-dim); padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.role-badge { background-color: var(--md-sys-color-secondary-fixed); color: var(--md-sys-color-on-secondary-fixed-variant); padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 
 /* Legacy utility normalization: keeps every role/page on the same Civic Flow system. */
 [class~="bg-white"] { background-color: var(--color-card) !important; }
-[class~="bg-slate-50"], [class~="bg-slate-100"], [class~="bg-stone-50"], [class~="bg-stone-100"] { background-color: var(--color-secondary) !important; }
+[class~="bg-slate-50"], [class~="bg-slate-100"], [class~="bg-stone-50"], [class~="bg-stone-100"], [class~="bg-[#F8FAFC]"], [class~="bg-[#F7F9F8]"] { background-color: var(--color-secondary) !important; }
 [class~="text-slate-900"], [class~="text-slate-800"], [class~="text-slate-700"], [class~="text-slate-600"], [class~="text-stone-900"], [class~="text-stone-800"], [class~="text-stone-700"], [class~="text-stone-600"] { color: var(--color-foreground) !important; }
 [class~="text-slate-500"], [class~="text-slate-400"], [class~="text-stone-500"], [class~="text-stone-400"] { color: var(--color-muted-foreground) !important; }
 [class~="border-slate-200"], [class~="border-slate-100"], [class~="border-stone-200"], [class~="border-stone-100"] { border-color: var(--color-border) !important; }
 [class~="text-blue-600"], [class~="text-blue-700"], [class~="text-indigo-600"], [class~="text-indigo-700"], [class~="text-[#2563EB]"] { color: var(--color-primary) !important; }
-[class~="bg-blue-50"], [class~="bg-[#EFF6FF]"], [class~="bg-indigo-50"] { background-color: var(--color-accent) !important; }
-[class~="border-blue-200"], [class~="border-indigo-200"], [class~="border-[#2563EB]"] { border-color: var(--color-input) !important; }
+[class~="bg-blue-50"], [class~="bg-[#EFF6FF]"], [class~="bg-indigo-50"] { background-color: var(--md-sys-color-secondary-container) !important; }
+[class~="border-blue-200"], [class~="border-indigo-200"], [class~="border-[#2563EB]"] { border-color: var(--md-sys-color-outline-variant) !important; }
 [class~="bg-[#2563EB]"], [class~="bg-indigo-600"], [class~="bg-blue-600"] { background-color: var(--color-primary) !important; }
 [class~="hover:bg-[#1D4ED8]"]:hover, [class~="hover:bg-blue-700"]:hover { background-color: var(--color-primary-hover) !important; }
 [class~="text-emerald-600"], [class~="text-emerald-700"], [class~="text-emerald-800"] { color: var(--color-primary) !important; }
@@ -82,4 +129,25 @@
 [class~="border-emerald-200"] { border-color: var(--color-input) !important; }
 [class~="focus:border-[#2563EB]"]:focus, [class~="focus:border-blue-500"]:focus { border-color: var(--color-primary) !important; }
 [class~="focus:ring-blue-500\/20"]:focus { --tw-ring-color: color-mix(in srgb, var(--color-primary) 20%, transparent) !important; }
+
+/* Remaining citizen-flow legacy green utilities resolve through primary roles. */
+[class~="bg-[#12533e]"] { background-color: var(--md-sys-color-primary-container) !important; }
+[class~="text-[#12533e]"] { color: var(--md-sys-color-primary) !important; }
+[class~="bg-[#e5f8ee]"] { background-color: var(--md-sys-color-secondary-container) !important; }
+[class~="hover:bg-[#0e4231]"]:hover { background-color: var(--md-sys-color-primary) !important; }
+[class~="focus:border-[#12533e]"]:focus { border-color: var(--md-sys-color-primary) !important; }
+[class~="focus:ring-[#12533e]\/30"]:focus { --tw-ring-color: color-mix(in srgb, var(--md-sys-color-primary) 30%, transparent) !important; }
+
+/* Dark navigation is an inverse-surface component, not an unrelated slate palette. */
+[class~="bg-[#0F172A]"] { background-color: var(--md-sys-color-inverse-surface) !important; }
+[class~="border-[#1E293B]"] { border-color: var(--md-sys-color-inverse-surface) !important; }
+[class~="bg-[#1E293B]"], [class~="bg-slate-800"] { background-color: var(--md-sys-color-inverse-surface) !important; }
+[class~="text-[#60A5FA]"] { color: var(--md-sys-color-inverse-primary) !important; }
+
+/* The GIS canvas is intentionally the tertiary (blue) channel. */
+.gis-surface {
+  border-color: var(--md-sys-color-tertiary) !important;
+  background-color: var(--md-sys-color-on-tertiary-fixed) !important;
+  background-image: radial-gradient(var(--md-sys-color-tertiary) 1px, transparent 1px) !important;
+}
 

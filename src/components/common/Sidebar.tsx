@@ -46,22 +46,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
   return (
     <aside
       id="desktop-sidebar"
-      className="w-60 bg-[#0F172A] text-white flex-shrink-0 flex flex-col justify-between hidden md:flex min-h-[calc(100vh-6.5rem)] border-r border-[#1E293B]"
+      className="w-60 bg-primary text-primary-foreground flex-shrink-0 flex flex-col justify-between hidden md:flex min-h-[calc(100vh-6.5rem)] border-r border-white/20"
     >
       <div className="py-5 space-y-5">
         {/* Brand / Logo Header */}
-        <div className="px-5 font-extrabold text-base tracking-tight text-[#60A5FA] flex items-center gap-2">
-          <Shield size={20} className="text-[#60A5FA]" />
+        <div className="px-5 font-extrabold text-base tracking-tight text-white flex items-center gap-2">
+          <Shield size={20} className="text-white" />
           <span>CIVIC FLOW</span>
         </div>
 
         {/* Context Card */}
-        <div className="mx-4 bg-[#1E293B]/80 border border-slate-700/60 rounded-xl p-3 text-left">
-          <div className="flex items-center gap-2 text-[#60A5FA] font-bold text-[11px]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8]" />
+        <div className="mx-4 bg-white/10 border border-white/20 rounded-xl p-3 text-left">
+          <div className="flex items-center gap-2 text-white font-bold text-[11px]">
+            <span className="w-1.5 h-1.5 rounded-full bg-white" />
             <span className="uppercase tracking-wider">{role === 'admin' ? 'Command Center' : 'Field Operations'}</span>
           </div>
-          <p className="text-[11px] text-slate-400 mt-1 leading-snug">
+          <p className="text-[11px] text-white/80 mt-1 leading-snug">
             {role === 'admin'
               ? 'Real-time telemetry & dispatch'
               : 'Zone 3 Rapid Response Unit'}
@@ -70,7 +70,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
 
         {/* Navigation links */}
         <nav className="space-y-1">
-          <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 px-5 py-1">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-white/70 px-5 py-1">
             System Menu
           </div>
           {navItems.map((item) => {
@@ -83,18 +83,18 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
                 onClick={() => onSelectTab(item.id)}
                 className={`w-full flex items-center justify-between px-5 py-3 text-xs font-semibold transition-all ${
                   isActive
-                    ? 'bg-[#1E293B] text-white border-l-4 border-[#2563EB]'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
+                    ? 'bg-white/15 text-white border-l-4 border-white'
+                    : 'text-white/75 hover:text-white hover:bg-white/10'
                 }`}
               >
                 <div className="flex items-center gap-3">
-                  <Icon size={16} className={isActive ? 'text-[#60A5FA]' : 'text-slate-400'} />
+                  <Icon size={16} className={isActive ? 'text-white' : 'text-white/75'} />
                   <span>{item.label}</span>
                 </div>
                 {item.count && (
                   <span
                     className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
-                      isActive ? 'bg-[#2563EB] text-white' : 'bg-slate-800 text-slate-400'
+                      isActive ? 'bg-white text-primary' : 'bg-white/10 text-white/75'
                     }`}
                   >
                     {item.count}
@@ -107,12 +107,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
       </div>
 
       {/* Footer Info */}
-      <div className="p-4 border-t border-slate-800 space-y-2 text-left">
-        <div className="text-[11px] text-slate-400 flex items-center gap-1.5">
-          <span className="w-2 h-2 rounded-full bg-[#22C55E]" />
+      <div className="p-4 border-t border-white/20 space-y-2 text-left">
+        <div className="text-[11px] text-white/80 flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-white" />
           <span>SLA Engine Online • 99.9%</span>
         </div>
-        <div className="text-[10px] text-slate-500">
+        <div className="text-[10px] text-white/65">
           Connected to Municipal API Gateway
         </div>
       </div>

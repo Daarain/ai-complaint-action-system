@@ -151,7 +151,7 @@ export const AdminHeatmap: React.FC<AdminHeatmapProps> = ({ onSelectComplaint })
           </div>
 
           {/* Interactive Simulated Map Grid & Points */}
-          <div className="relative w-full h-[360px] my-4 rounded-xl border border-slate-800 bg-[radial-gradient(#2563EB_1px,transparent_1px)] [background-size:24px_24px] bg-[#0A101D]">
+          <div className="gis-surface relative w-full h-[360px] my-4 rounded-xl border [background-size:24px_24px]">
             {/* Grid Vector Roads Simulation */}
             <svg className="absolute inset-0 w-full h-full opacity-30 pointer-events-none stroke-blue-500/40">
               <line x1="0%" y1="30%" x2="100%" y2="30%" strokeWidth="2" />
